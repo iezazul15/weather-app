@@ -72,7 +72,10 @@ function handleFetch(url) {
     .then((data) => {
       weatherBox.innerHTML = getData(data); // Update UI with fetched weather data
     })
-    .catch((e) => console.log(e)); // Log errors if any occur
+    .catch((e) => {
+      console.log(e); // Log errors if any occur
+      alert("City not found");
+    });
 }
 
 /**
